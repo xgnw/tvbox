@@ -21,6 +21,7 @@ jobs:
         run: |
           pip install requests
           pip install urllib3
+          pip install pycryptodome
       - name: 生成json文件
         run: |
           export TZ='Asia/Shanghai'
@@ -35,4 +36,4 @@ jobs:
       - name: 推送
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
